@@ -1,15 +1,15 @@
 limitChars
 ==========
 
-#limitChars jQuery plugin for text inputs
+# limitChars -  jQuery plugin for text inputs
 
 jQuery plugin for making a text input not allow you type more character than fits into it.
 
-# Dependencies
+## Dependencies
 
 jQuery
 
-# Usage: 
+## Usage: 
 
   <input id="limited-input" type="text"/>
   
