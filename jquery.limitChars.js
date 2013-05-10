@@ -2,7 +2,7 @@
     
     $.fn.limitChars = function() {
         var getScrollWidth = function($el) {
-            if (window.navigator.userAgent.indexOf('Mozilla') > -1) {
+            if (window.navigator.userAgent.indexOf('Mozilla') > -1 || window.navigator.userAgent.indexOf('Opera') > -1) {
                 var $tmp = $('<div/>').css({
                         "width": "auto",
                         "height": $el.height(),
@@ -26,14 +26,11 @@
         };
         
         var doLimiting = function() {
-            
             var $el = $(this);
             var reduce = function() {
-                
                 var ret = false,
                     of = $el.css('overflow');
                 $el.css('overflow', 'auto');
-                console.log(getScrollWidth($el));
                 if (getScrollWidth($el) > $el.width()) {
                     $el.val($el.val().slice(0,-1));
                     reduce();
